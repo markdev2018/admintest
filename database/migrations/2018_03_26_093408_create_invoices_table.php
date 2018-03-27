@@ -17,9 +17,9 @@ class CreateInvoicesTable extends Migration
             $table->increments('id');
 			$table->integer('customer_id');
 			$table->string('invoice_no');
-			$table->double('amount');
-			$table->double('balance');
-			$table->date('date');
+			$table->double('amount')->default(10000);
+			$table->double('balance')->default(0);
+			$table->date('date')->nullable(true);
             $table->timestamps();
         });
     }

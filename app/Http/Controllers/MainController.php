@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
+use App\Invoice;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -13,7 +15,8 @@ class MainController extends Controller
      */
     public function index()
     {
-        //
+		$customers = Customer::all();
+        return view('index',compact('customers'));
     }
 
     /**
