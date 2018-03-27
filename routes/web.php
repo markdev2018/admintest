@@ -12,3 +12,5 @@
 */
 
 Route::get('/','MainController@index');
+Route::resource('invoice','InvoiceController');
+Route::resource('main','MainController');
